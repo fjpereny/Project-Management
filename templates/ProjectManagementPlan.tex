@@ -20,14 +20,22 @@
 \usepackage[T1]{fontenc}
 \usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
 \usepackage{titlesec}
+\usepackage{draftwatermark}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
 
 % Document Definitions
 \newcommand\projectname{Project Name}
 \newcommand\subtitle{Subtitle}
-
+\definecolor{lightgray}{gray}{0.9}
 
 \date{Revision Date: \today}
-\author{Program Manager: Program Manager}
+\author{Program Manager: Frank Pereny}
+
+% Enable or disable DRAFT watermark
+\SetWatermarkText{\textbf{DRAFT}}
+\SetWatermarkScale{4}
 
 % Title Setup
 \title
@@ -45,37 +53,88 @@
 	\tableofcontents
 	
 	\part{Initiating}
-	\chapter{Project Integration Management}
-	\section{Develop Project Charter}
-	\chapter{Project Stakeholder Management}
-	\section{Identify Stakeholders}
+	\chapter{Project Charter}
+	\section{Charter Documents}
+	
+	
+\chapter{Stakeholder Management}
+	\section{Identified Stakeholders}
+		\subsection{Sponsors}
+			\begin{table}[!htbp]
+				\rowcolors{1}{gray!25}{white}
+				\small
+				\begin{tabularx}{\textwidth}{|X|X|X|X|l|}
+					\hline
+					\textbf{Name} & \textbf{Title} & \textbf{Organization} & \textbf{Email} & \textbf{Phone} \\ \hline
+					Sponsor A     & Title A        & Organization A        & a@a.com        & 123-456-7890   \\ \hline
+					Sponsor B     & Title B        & Organization B        & b@b.com        & 123-456-7890   \\ \hline
+					Sponsor C     & Title C        & Organization C        & c@c.com        & 123-456-7890   \\ \hline
+				\end{tabularx}
+				\caption{Project Sponsor List}
+			\end{table}
+			\normalfont
+
+		\subsection{Team Members}
+			\begin{table}[!htbp]
+				\rowcolors{1}{gray!25}{white}
+				\small
+				\begin{tabularx}{\textwidth}{|X|X|X|X|l|}
+					\hline
+					\textbf{Name} & \textbf{Title} & \textbf{Organization} & \textbf{Email} & \textbf{Phone} \\ \hline
+					Team Member A & Title A        & Organization A        & a@a.com        & 123-456-7890   \\ \hline
+					Team Member B & Title B        & Organization B        & b@b.com        & 123-456-7890   \\ \hline
+					Team Member C & Title C        & Organization C        & c@c.com        & 123-456-7890   \\ \hline
+				\end{tabularx}
+				\caption{Team Member List}
+			\end{table}
+			\normalfont
+
+	\subsection{Internal Stakeholders}
+	\subsection{External Stakeholders}
 	
 	
 	\part{Planning}
-	\chapter{Project Integration Management}
-	\section{Develop Project Management Plan}
-	\chapter{Project Scope Management}
-	\section{Plan Scope Management}
-	\section{Collect Requirements}
-	\section{Define Scope}
-	\section{Create WBS}
-	\chapter{Project Schedule Management}
-	\section{Plan Schedule Management}
-	\section{Define Activities}
-	\section{Sequence Activities}
-	\section{Estimate Activity Durations}
-	\section{Develop Schedule}
-	\chapter{Project Cost Management}
-	\section{Plan Cost Management}
-	\section{Estimate Costs}
-	\section{Determine Budget}
-	\chapter{Project Quality Management}
-	\section{Plan Quality Management}
-	\chapter{Project Resource Management}
-	\section{Plan Resource Management}
-	\section{Estimate Activity Resources}
-	\chapter{Project Communications Management}
-	\section{Plan Communications Management}
+	\part*{Project Management Plan}
+	\addcontentsline{toc}{part}{Project Management Plan}
+	
+	\chapter{Scope Management Plan}
+	\section{Requirements}
+	\section{Scope}
+	\section{Work Breakdown Structure (WBS)}
+	\chapter{Schedule Management Plan}
+	\section{Activities}
+	\section{Activity Sequence}
+	\section{Estimated Activity Durations}
+	\section{Schedule}
+
+	\chapter{Cost Management Plan}
+	\section{Cost Estimates}
+	\subsection{Contract Costs}
+	\subsection{Material Costs}
+	\subsection{Labor Costs}
+	\subsection{Overhead Costs}
+	\subsection{Certification Costs}
+	\subsection{Legal Costs}
+	\subsection{Opportunity Costs}
+	\section{Project Budget}
+	
+	\chapter{Quality Management Plan}
+	\section{Quality Targets}
+	
+	\chapter{Resource Management Plan}
+	\section{Activity Resource Estimates}
+	\subsection{Direct Labor}
+	\subsection{Contract Labor}
+	\subsection{Tooling \& Infrastructure}
+	\subsection{Material}
+	
+	\chapter{Communications Management Plan}
+	\section{Communication Matrix}
+	\section{Project Meeting \& Updates Schedule}
+	\subsection{Internal Team Meetings}
+	\subsection{External Team Meetings}
+	\subsection{Sponsor \& Stakeholder Updates}
+	
 	\chapter{Project Risk Management}
 	\section{Plan Risk Management}
 	\section{Identify Risks}
